@@ -16,10 +16,10 @@
         <!-- 输入框 -->
 
         <el-form-item label="用户名" prop="username">
-          <el-input v-model="ruleForm.username" prefix-icon="myicon-user"></el-input>
+          <el-input v-model="ruleForm.username" placeholder="用户名" prefix-icon="myicon-user"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="password">
-          <el-input v-model="ruleForm.password" prefix-icon="myicon-key"></el-input>
+          <el-input v-model="ruleForm.password" placeholder="密码" prefix-icon="myicon-key"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button class="login-btn" type="primary" plain @click="submitForm('ruleForm')">登录</el-button>
@@ -71,8 +71,8 @@ export default {
  <style lang="less" scoped>
 .login {
   position: fixed;
-  width: 2000px;
-  height: 1000px;
+  width: 100%;
+  height: 100%;
   background-color: #2f4050;
   background: url("../img/311993150.jpg") no-repeat;
   background-size: cover;
@@ -80,14 +80,15 @@ export default {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 182px;
-    width: 420px;
+    bottom: 90px;
+    width: 400px;
     height: 300px;
     margin: 200px auto;
     padding: 30px;
-    background: white;
+    background: #fbfeff;
+    opacity: 0.9;
     border: 7px solid #eee;
-    border-radius: 30px;
+    // border-radius: 30px;
     .loginForm-tab {
       width: 100%;
       line-height: 70px;
@@ -99,7 +100,7 @@ export default {
       }
     }
     .demo-ruleForm {
-      padding: 0px 40px 15px 30px;
+      padding: 0px 40px 20px 30px;
     }
     .login-btn {
       width: 100%;
