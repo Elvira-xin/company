@@ -1,32 +1,34 @@
 <template>
   <div class="login">
-    <!-- <div class="block">
-      <el-carousel trigger="click" >
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3>{{ item }}</h3>
-        </el-carousel-item>
-      </el-carousel>
-    </div>-->
     <!-- 登录框 -->
-    <div class="login-title">登录</div>
-    <el-form
-      :model="ruleForm"
-      :rules="rules"
-      ref="ruleForm"
-      label-width="70px"
-      class="demo-ruleForm"
-    >
-      <el-form-item label="用户名" prop="username">
-        <el-input v-model="ruleForm.username"></el-input>
-      </el-form-item>
-      <el-form-item label="密码" prop="password">
-        <el-input v-model="ruleForm.password"></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
-        <el-button @click="resetForm('ruleForm')">重置</el-button>
-      </el-form-item>
-    </el-form>
+    <div class="container">
+      <!-- tab栏 -->
+      <div class="loginForm-tab">
+        <span class="login-account">摩富金服后台管理系统</span>
+      </div>
+      <el-form
+        :model="ruleForm"
+        :rules="rules"
+        ref="ruleForm"
+        label-width="70px"
+        class="demo-ruleForm"
+      >
+        <!-- 输入框 -->
+
+        <el-form-item label="用户名" prop="username">
+          <el-input v-model="ruleForm.username" prefix-icon="myicon-user"></el-input>
+        </el-form-item>
+        <el-form-item label="密码" prop="password">
+          <el-input v-model="ruleForm.password" prefix-icon="myicon-key"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button class="login-btn" type="primary" plain @click="submitForm('ruleForm')">登录</el-button>
+        </el-form-item>
+      </el-form>
+      <span class="findPassword">
+        <a href="#">找回密码</a>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -67,42 +69,50 @@ export default {
 </script>
 
  <style lang="less" scoped>
-//  .el-carousel{
-//      height: 100%;
-//  }
-//   .el-carousel__item h3 {
-//     color: #475669;
-//     font-size: 14px;
-//     opacity: 0.75;
-//     line-height: 150px;
-//     margin: 0;
-//   }
-//   .el-carousel__item:nth-child(2n) {
-//      background-color: #99a9bf;
-//   }
-
-//   .el-carousel__item:nth-child(2n+1) {
-//      background-color: #d3dce6;
-//   }
 .login {
-  background-color: #99a9bf;
   position: fixed;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.demo-ruleForm {
-  background-color: pink;
-  padding: 40px;
-  border-radius: 5%
-}
-.login-title {
-  color: white;
-}
-.el-form-item__label {
-  color: white;
+  width: 2000px;
+  height: 1000px;
+  background-color: #2f4050;
+  background: url("../img/311993150.jpg") no-repeat;
+  background-size: cover;
+  .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 182px;
+    width: 420px;
+    height: 300px;
+    margin: 200px auto;
+    padding: 30px;
+    background: white;
+    border: 7px solid #eee;
+    border-radius: 30px;
+    .loginForm-tab {
+      width: 100%;
+      line-height: 70px;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 25px;
+      .login-account {
+        color: #4b6796;
+      }
+    }
+    .demo-ruleForm {
+      padding: 0px 40px 15px 30px;
+    }
+    .login-btn {
+      width: 100%;
+    }
+    .findPassword {
+      position: absolute;
+      right: 60px;
+      bottom: 20px;
+      a {
+        color: #4b6796;
+        font-size: 12px;
+      }
+    }
+  }
 }
 </style>
