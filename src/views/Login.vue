@@ -15,20 +15,11 @@
         class="demo-ruleForm"
       >
         <!-- 输入框 -->
-<<<<<<< HEAD
         <el-form-item prop="username">
           <el-input v-model="ruleForm.username" placeholder="请输入账号" prefix-icon="myicon-user" class="loginForm-input"></el-input>
         </el-form-item>
         <el-form-item  prop="password">
           <el-input v-model="ruleForm.password" placeholder="请输入密码" prefix-icon="myicon-key" class="loginForm-input"></el-input>
-=======
-
-        <el-form-item label="用户名" prop="username">
-          <el-input v-model="ruleForm.username" placeholder="用户名" prefix-icon="myicon-user"></el-input>
-        </el-form-item>
-        <el-form-item label="密码" prop="password">
-          <el-input v-model="ruleForm.password" placeholder="密码" prefix-icon="myicon-key"></el-input>
->>>>>>> 1e050fcc586ea3c4bdfaa1e71b8cf06c5d10fd57
         </el-form-item>
         <el-form-item>
           <el-button class="login-btn" type="warning" plain @click="submitForm('ruleForm')">立即登录</el-button>
@@ -70,12 +61,8 @@ export default {
 .login {
   position: fixed;
   width: 100%;
-<<<<<<< HEAD
   height: 90%;
     top: 5%;
-=======
-  height: 100%;
->>>>>>> 1e050fcc586ea3c4bdfaa1e71b8cf06c5d10fd57
   background-color: #2f4050;
   background: url("../img/308296275.jpg") no-repeat;
   background-size: cover;
@@ -83,7 +70,6 @@ export default {
     position: absolute;
     left: 0;
     right: 0;
-<<<<<<< HEAD
     bottom: -48px;
     width: 408px;
     height: 428px;
@@ -92,18 +78,6 @@ export default {
     border-radius: 12px;
     .loginForm-top {
       border-radius: 12px 12px 0 0;
-=======
-    bottom: 90px;
-    width: 400px;
-    height: 300px;
-    margin: 200px auto;
-    padding: 30px;
-    background: #fbfeff;
-    opacity: 0.9;
-    border: 7px solid #eee;
-    // border-radius: 30px;
-    .loginForm-tab {
->>>>>>> 1e050fcc586ea3c4bdfaa1e71b8cf06c5d10fd57
       width: 100%;
       height: 87px;
       background-color: #db7e0c;
@@ -139,17 +113,17 @@ export default {
       }
     }
     .demo-ruleForm {
-<<<<<<< HEAD
       padding: 20px 40px 15px 30px;
     }
+    el-input__icon{
+        font-size: 36px;
+        width: 50px;
+      }
     /deep/ .loginForm-input .el-input__inner {
         border: 0 none;
         border-bottom: 1px solid #ccc;
         border-radius: 0px;
 
-=======
-      padding: 0px 40px 20px 30px;
->>>>>>> 1e050fcc586ea3c4bdfaa1e71b8cf06c5d10fd57
     }
     .login-btn {
       width: 100%;
