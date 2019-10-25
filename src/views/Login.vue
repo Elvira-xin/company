@@ -19,7 +19,7 @@
           <el-input v-model="ruleForm.username" placeholder="请输入账号" prefix-icon="myicon-user" class="loginForm-input"></el-input>
         </el-form-item>
         <el-form-item  prop="password">
-          <el-input v-model="ruleForm.password" placeholder="请输入密码" prefix-icon="myicon-key" class="loginForm-input"></el-input>
+          <el-input v-model="ruleForm.password" placeholder="请输入密码" type="password" prefix-icon="myicon-key" class="loginForm-input"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button class="login-btn" type="warning" plain @click="submitForm('ruleForm')">立即登录</el-button>
@@ -63,6 +63,7 @@ export default {
   width: 100%;
   height: 90%;
     top: 5%;
+    left: 0;
   background-color: #2f4050;
   background: url("../img/308296275.jpg") no-repeat;
   background-size: cover;
